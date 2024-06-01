@@ -3,18 +3,18 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchPlaceholders = createAsyncThunk(
   "fetchPlaceholders",
   async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/images`);
-    return res?.json();
+    const response = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+    return response.json();
   }
 );
 
 const initialState = {
   isLoading: false,
-  data: []
+  album: []
 };
 
 const placeholderSlice = createSlice({
-  name: "placeholder",
+  name: "placeholders",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -24,11 +24,11 @@ const placeholderSlice = createSlice({
       })
       .addCase(fetchPlaceholders.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.data = action.payload;
+        state.album = action.payload;
       })
       .addCase(fetchPlaceholders.rejected, (state, action) => {
         state.isLoading = false;
-        state.data = []
+        state.album = []
       });
   },
 });
