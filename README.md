@@ -29,6 +29,9 @@ Run the following commands in the project directory
 
 - `npm test`
 
+## Screenshot of the Unit Test with Jest
+![Unit Test with Jest](https://github.com/mzoyinda/modernPhotos/blob/main/public/tests.png)
+
 ## Screenshot of the website
 ![ModernPhotos Header](https://github.com/mzoyinda/modernPhotos/blob/main/public/header.png)
 
