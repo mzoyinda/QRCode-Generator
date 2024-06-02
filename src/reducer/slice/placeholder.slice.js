@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchPlaceholders = createAsyncThunk(
   "fetchPlaceholders",
   async () => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+    const response = await fetch(process.env.REACT_APP_API_URL);
     return response.json();
   }
 );
