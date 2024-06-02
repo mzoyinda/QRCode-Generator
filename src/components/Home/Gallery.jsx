@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { fetchPlaceholders } from "../../reducer/slice/placeholder.slice";
 import PhotosHeader from "./PhotosHeader";
 import LazyLoad from 'react-lazyload';
+import { useAppDispatch, useAppSelector } from "../../hooks/redux-hooks";
 
 const Gallery = () => {
   const [filteredAlbum, setFilteredAlbum] = useState([]);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const { album, isLoading, error } = useSelector((state) => state.placeholders);
+  const { album, isLoading, error } = useAppSelector((state) => state.placeholders);
 
   useEffect(() => {
     const cachedAlbum = localStorage.getItem("album");

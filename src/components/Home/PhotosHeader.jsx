@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../hooks/redux-hooks';
 
 const PhotoHeader = ({setFilteredAlbum}) => {
   
   const[query, setQuery] = useState("")
 
-  const {album } = useSelector((state) => state.placeholders);
+  const {album } = useAppSelector((state) => state.placeholders);
   
   useEffect(() => {
     

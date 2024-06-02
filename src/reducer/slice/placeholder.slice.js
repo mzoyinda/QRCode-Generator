@@ -14,7 +14,7 @@ const initialState = {
   error: false
 };
 
-const placeholderSlice = createSlice({
+export const placeholderSlice = createSlice({
   name: "placeholders",
   initialState,
   reducers: {},
