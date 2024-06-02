@@ -30,4 +30,6 @@ Run the following commands in the project directory
 - `npm test`
 
 ## Screenshot of the website
-![ModernPhotos Header]()
+![ModernPhotos Header](https://github.com/mzoyinda/modernPhotos/blob/main/public/header.png)
+
+![ModernPhotos Gallery](https://github.com/mzoyinda/modernPhotos/blob/main/public/gallery.png)
