@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchPlaceholders } from '../reducer/slice/placeholder.slice'
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Album from '../components/Home/Gallery'
 
 const Home = () => {
-    const { album } = useSelector(state => state.placeholders)
-    const [loading, setLoading] = useState(false)
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(fetchPlaceholders())
-    }, [])
-    
   return (
-    <main>
-        <section>
-          <h1>Welcome Home</h1>
-          {album.slice(0,10).map((item)=>{
-            return(
-              <img src={item.thumbnailUrl} alt="item" />
-            )
-          })}
-        </section>
+    <main className='bg-gray-100 shadow-md 3xl:flex 3xl:items-center 3xl:flex-col 3xl:justify-center'>
+       <div className='max-w-[2500px] w-full 3xl:px-4 mx-auto'>
+          <Navbar/>
+          <Header/>
+          <Album/>
+          <Footer/>
+        </div>
     </main>
   )
 }
