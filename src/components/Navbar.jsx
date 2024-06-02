@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full transition-colors z-50 duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-      <div className="container p-4">
+      <div className="container p-4 pl-10">
         <div className={`text-2xl font-bold ${scrolled ? "text-black" : "text-white"}`}>
           ModernPhotos
         </div>
