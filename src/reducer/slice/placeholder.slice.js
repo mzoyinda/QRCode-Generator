@@ -26,6 +26,7 @@ const placeholderSlice = createSlice({
       .addCase(fetchPlaceholders.fulfilled, (state, action) => {
         state.isLoading = false;
         state.album = action.payload;
+        localStorage.setItem("album", JSON.stringify(action.payload))
       })
       .addCase(fetchPlaceholders.rejected, (state, action) => {
         state.isLoading = false;

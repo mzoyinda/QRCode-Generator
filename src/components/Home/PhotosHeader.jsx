@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-const PhotoHeader = ({setfilteredAlbum}) => {
-
+const PhotoHeader = ({setFilteredAlbum}) => {
+  
   const[query, setQuery] = useState("")
 
-  const { album } = useSelector((state) => state.placeholders);
-
+  const {album } = useSelector((state) => state.placeholders);
+  
   useEffect(() => {
-    let imageData = album.filter(
-      (image) =>
-        image.title.toLowerCase().indexOf(query.toString().toLowerCase()) >=
-        0
-    );
+    
+      let imageData = album.filter(
+        (image) =>
+          image.title.toLowerCase().indexOf(query.toString().toLowerCase()) >=
+          0
+      );
+  
+      setFilteredAlbum(imageData)
 
-    setfilteredAlbum(imageData)
   }, [query, album]);
 
   return (
