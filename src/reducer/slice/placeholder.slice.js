@@ -10,7 +10,8 @@ export const fetchPlaceholders = createAsyncThunk(
 
 const initialState = {
   isLoading: false,
-  album: []
+  album: [],
+  error: false
 };
 
 const placeholderSlice = createSlice({
@@ -29,6 +30,7 @@ const placeholderSlice = createSlice({
       .addCase(fetchPlaceholders.rejected, (state, action) => {
         state.isLoading = false;
         state.album = []
+        state.error = true
       });
   },
 });
