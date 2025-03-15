@@ -1,19 +1,12 @@
-# ModernPhotos Website
-A website that allows users to load and filter thousands of images seamlessly.
+# QRCode Generator
+A website that allows users to enter the link of a website and generate a QR Code
 
-view the deployed project [here](https://modern-photos.vercel.app/)
+view the deployed project [here]()
 
 
 ## Technologies Used to build the APP
-- React JS
-- Tailwind
-- Jest
-- JsonPlaceholder Photos API
-
-  ## Features Available in the APP
-- Lazyloading of Photos
-- Caching of already loaded images
-- Search and Filtering of Photos
+- React.JS
+- Node.JS
 
 ## Getting Started with ModernPhotos Project
 Run the following commands in the project directory
@@ -24,15 +17,6 @@ Run the following commands in the project directory
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Testing ModernPhotos Project
-Run the following commands in the project directory
-
-- `npm test`
-
-## Screenshot of the Unit Test with Jest
-![Unit Test with Jest](https://github.com/mzoyinda/modernPhotos/blob/main/public/tests.png)
 
 ## Screenshot of the website
-![ModernPhotos Header](https://github.com/mzoyinda/modernPhotos/blob/main/public/header.png)
 
-![ModernPhotos Gallery](https://github.com/mzoyinda/modernPhotos/blob/main/public/gallery.png)
