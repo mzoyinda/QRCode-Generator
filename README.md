@@ -8,7 +8,7 @@ view the deployed project [here]()
 - React.JS
 - Node.JS
 
-## Getting Started with ModernPhotos Project
+## Getting Started with QRCode Generator Project
 Run the following commands in the project directory
 
 - `npm install`
