@@ -1,6 +1,12 @@
 name: Build and Publish image to Docker Hub
 on:
-  [workflow_dispatch]
+ push:
+  branches:
+    - main
+  paths: 
+    - 'backend/Dockerfile'
+    - 'frontend/Dockerfile'
+
 # processes i'd like to run
 jobs:
   publish_images: 
