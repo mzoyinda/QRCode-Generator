@@ -5,11 +5,11 @@ on:
 jobs:
   publish_images: 
     runs-on: ubuntu-latest
-      steps: 
+    steps: 
         - name: checkout
           uses: actions/checkout@v4
         - name: build image
           run: docker build ./backend/ -t oyindawodu/devops-qr-code-frontend:latest
-        - push image to docker hub
+        - name: push image to docker hub
           run: |
             docker push oyindawodu/devops-qr-code-frontend:latest
