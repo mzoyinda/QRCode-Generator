@@ -13,3 +13,4 @@ jobs:
         - name: push image to docker hub
           run: |
             docker push oyindawodu/devops-qr-code-frontend:latest
+            
