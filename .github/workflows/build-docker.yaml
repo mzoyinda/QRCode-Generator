@@ -1,7 +1,7 @@
 name: Build and Publish image to Docker Hub
 on:
   [workflow_dispatch]
-
+# processes i'd like to run
 jobs:
   publish_images: 
     runs-on: ubuntu-latest
@@ -13,4 +13,3 @@ jobs:
         - name: push image to docker hub
           run: |
             docker push oyindawodu/devops-qr-code-frontend:latest
-            
