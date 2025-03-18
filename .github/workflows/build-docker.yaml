@@ -9,8 +9,9 @@ jobs:
         - name: checkout
           uses: actions/checkout@v4
         - name: build image
-          run: docker build ./backend/ -t oyindawodu/devops-qr-code-frontend:latest
+          run: docker build ./Backend/ -t oyindawodu/devops-qr-code-frontend:latest
         - name: push image to docker hub
           run: |
+            docker login -u oyindawodu -p ${{ secrets.DOCKER_HUB_TOKEN }}
             docker push oyindawodu/devops-qr-code-frontend:latest
 
